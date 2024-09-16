@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="{{ metadata.language }}" color-mode="user">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{{ title or metadata.title }}</title>
+		<meta name="description" content="{{ description or metadata.description }}">
+
+		{#- Atom and JSON feeds included by default #}
+		<link rel="alternate" href="/feed.xml" type="application/rss+xml" title="{{ metadata.title }}">
+
+		<meta name="generator" content="{{ eleventy.generator }}">
+
+		<link rel="stylesheet" href="https://unpkg.com/mvp.css"> 
+		<link href="/assets/fontawesome/css/all.min.css" rel="stylesheet"/>
+
+
+	</head>
+	<body>
+		<div>
+			<main>
+				<header>
+				<nav>
+					<ul>
+					{%- for entry in collections.all | eleventyNavigation %}
+						<li><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+					{%- endfor %}
+					</ul>
+				</nav>
+				</header>
+				{{ content | safe }}
+			</main>
+		</div>
+	</body>
+</html>

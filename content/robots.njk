@@ -1,0 +1,12 @@
+---
+permalink: /robots.txt
+layout: null
+eleventyExcludeFromCollections: true
+---
+{% setAsync "aiRobotsTxt" %}{% aiRobots %}{% endsetAsync %}
+{{ aiRobotsTxt }}
+
+User-agent: *
+Disallow: /assets
+
+sitemap: {{metadata.url}}/sitemap.xml

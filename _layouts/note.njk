@@ -1,0 +1,30 @@
+---
+layout: base.njk
+---
+	<h1>{{ title}}</h1>
+	<article>
+		{%- if tags.length  %}
+			<nav>
+				<ul>
+					{%- for tag in tags | filterTagList %}
+                    {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+	                <li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a></li>					
+                    {%- endfor %}
+				</ul>
+			</nav>
+		{%- endif %}
+		{{ content | safe }}
+
+	{%- if backlinks.length  %}
+    <small>
+        <h4>Pages that link to this page:</h4>
+        <ul>
+		{%- for backlink in backlinks %}
+            <li><a href="{{ backlink.url }}">{{ backlink.title }}</a></li>
+        {%- endfor %}
+        </ul>
+    </small>
+{%- endif %}
+	</article>
+
+
