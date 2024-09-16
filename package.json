@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npx @11ty/eleventy",
-    "serve": "npx @11ty/eleventy --serve",
+    "serve": "npx @11ty/eleventy --serve"
   },
   "author": "Jordan Thirus",
   "license": "CC-BY-NC-4.0",
