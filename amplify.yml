@@ -2,9 +2,12 @@ version: 1
 frontend:
   phases:
     preBuild: 
-      - cd site
-      - npm ci
-    build: npm run build
+      commands:
+        - cd site 
+        - npm ci
+    build: 
+      commands:
+        - npm run build
   artifacts:
     baseDirectory:  public
     files:
