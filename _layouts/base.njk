@@ -6,13 +6,12 @@
 		<title>{{ title or metadata.title }}</title>
 		<meta name="description" content="{{ description or metadata.description }}">
 
-		{#- Atom and JSON feeds included by default #}
 		<link rel="alternate" href="/feed.xml" type="application/rss+xml" title="{{ metadata.title }}">
 
 		<meta name="generator" content="{{ eleventy.generator }}">
 
-		<link rel="stylesheet" href="https://unpkg.com/mvp.css"> 
 		<link href="/assets/fontawesome/css/all.min.css" rel="stylesheet"/>
+		<link href="/assets/mvp.css" rel="stylesheet"/>
 
 
 	</head>
@@ -21,11 +20,7 @@
 			<main>
 				<header>
 				<nav>
-					<ul>
-					{%- for entry in collections.all | eleventyNavigation %}
-						<li><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-					{%- endfor %}
-					</ul>
+					{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
 				</nav>
 				</header>
 				{{ content | safe }}

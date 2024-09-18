@@ -2,11 +2,12 @@
 title: About This Site
 layout: base.njk
 eleventyNavigation:
-  key: About Site
+  parent: About
+  key: Site
 ---
 # About This Site
 
-This site was built with the [11ty](https://www.11ty.dev/) static site generator, [MVP.css](https://andybrewer.github.io/mvp/) for styling, and published on AWS using Amplify.
+This site was built with the [11ty](https://www.11ty.dev/) static site generator, [MVP.css](https://andybrewer.github.io/mvp/) for styling, and published on AWS using Amplify. I consider it to be in a MVP state and I'll continue updating as I progress on my journey.
 
 ## Terms of Service 
 

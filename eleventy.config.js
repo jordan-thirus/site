@@ -1,27 +1,35 @@
 const { DateTime } = require("luxon");
+const footnote = require('markdown-it-footnote');
+const wikilinks = require('markdown-it-wikilinks');
+const externallink = require('markdown-it-external-link').default;
+const backlinks = require("eleventy-plugin-backlinks");
+const rss = require("@11ty/eleventy-plugin-rss");
+const nav = require("@11ty/eleventy-navigation");
+const sitemap = require("@quasibit/eleventy-plugin-sitemap");
+
 
 module.exports = function(eleventyConfig) {
   // Customize Markdown library settings:
 	eleventyConfig.amendLibrary("md", mdLib => {
-		mdLib      
-      .use(require('markdown-it-footnote'))
+		mdLib
+      .set({linkify: true})      
+      .use(footnote)
       .use(require('markdown-it-attrs'))
-      .use(require('markdown-it-wikilinks')(
-        {
+      .use(wikilinks({
           makeAllLinksAbsolute: true, 
           baseURL: '/notebook',
           uriSuffix: ''
-        }
-      ))
+        }))
+      .use(externallink,
+        { hosts:['https://jordan.thirus.me', 'http://localhost:8080']}
+      )
 	});
 
   //add plugins
-  eleventyConfig.addPlugin(require("eleventy-plugin-backlinks"), {
-		folder: '/notebook'
-  });
-  eleventyConfig.addPlugin(require("@11ty/eleventy-plugin-rss"));
-  eleventyConfig.addPlugin(require("@11ty/eleventy-navigation"));
-  eleventyConfig.addPlugin(require("@quasibit/eleventy-plugin-sitemap"), {
+  eleventyConfig.addPlugin(backlinks, { folder: '/notebook' });
+  eleventyConfig.addPlugin(rss);
+  eleventyConfig.addPlugin(nav);
+  eleventyConfig.addPlugin(sitemap, {
     sitemap: {
       hostname: "https://jordan.thirus.me",
     },
