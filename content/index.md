@@ -6,4 +6,4 @@ eleventyNavigation:
 ---
 # Jordan Thirus' Notebook
 
-Welcome to my corner of the internet. Here I'll be building a [digital garden](https://maggieappleton.com/garden-history) as I continue to learn and grow. Start browsing through the [index](/notebook) or [tags](/tags).
+Welcome to my corner of the internet. Here I'll be building a [digital garden](https://maggieappleton.com/garden-history) as I continue to learn and grow. Start browsing through the [[0-index|notebook]] or [tags](/tags).
