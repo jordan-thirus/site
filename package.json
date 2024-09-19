@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "build": "npx @11ty/eleventy",
-    "serve": "npx @11ty/eleventy --serve"
+    "serve": "npx @11ty/eleventy --serve",
+    "postinstall": "patch-package"
   },
   "author": "Jordan Thirus",
   "license": "CC-BY-NC-4.0",
   "dependencies": {
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "^3.0.0-beta.1",
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
@@ -20,6 +21,7 @@
     "markdown-it-attrs": "^4.2.0",
     "markdown-it-external-link": "^1.1.0",
     "markdown-it-footnote": "^3.0.3",
-    "markdown-it-wikilinks": "^1.4.0"
+    "markdown-it-wikilinks": "^1.4.0",
+    "patch-package": "^8.0.0"
   }
 }

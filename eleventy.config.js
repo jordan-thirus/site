@@ -5,8 +5,6 @@ const externallink = require('markdown-it-external-link').default;
 const backlinks = require("eleventy-plugin-backlinks");
 const rss = require("@11ty/eleventy-plugin-rss");
 const nav = require("@11ty/eleventy-navigation");
-const sitemap = require("@quasibit/eleventy-plugin-sitemap");
-
 
 module.exports = function(eleventyConfig) {
   // Customize Markdown library settings:
@@ -29,11 +27,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(backlinks, { folder: '/notebook' });
   eleventyConfig.addPlugin(rss);
   eleventyConfig.addPlugin(nav);
-  eleventyConfig.addPlugin(sitemap, {
-    sitemap: {
-      hostname: "https://jordan.thirus.me",
-    },
-  });
   eleventyConfig.addPassthroughCopy('assets');
 
   eleventyConfig.addNunjucksAsyncShortcode("aiRobots", async function() {
@@ -58,7 +51,7 @@ module.exports = function(eleventyConfig) {
    eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
 		return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
 	});
-
+  
     return {
       markdownTemplateEngine: "njk",
       htmlTemplateEngine: "njk",
