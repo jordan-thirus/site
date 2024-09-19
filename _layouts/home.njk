@@ -1,0 +1,8 @@
+---
+layout: base.njk
+---
+{{ content | safe }}
+
+<h2>Featured Notes</h2> 
+{% set postslist = collections['featured'] %}
+{% include "_layouts/list.njk" %}
