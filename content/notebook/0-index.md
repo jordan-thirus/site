@@ -6,4 +6,7 @@ eleventyNavigation:
   order: 1
 ---
 
-To come...
+## Programming
+
+### AWS
+[[2409172213-Deploy-11ty-on-AWS-Amplify-Gen-2|2409172213]]  Deploy 11ty on AWS Amplify Gen 2

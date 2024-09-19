@@ -1,0 +1,29 @@
+@media (prefers-color-scheme: dark) {
+    :root[color-mode="user"] {
+        --color-accent: #0097fc4f;
+        --color-bg: #09111a;
+        --color-bg-secondary: #555;
+        --color-link: #0097fc;
+        --color-secondary: #555;
+        --color-secondary-accent: #e20de94f;
+        --color-shadow: #bbbbbb20;
+        --color-table: #0097fc;
+        --color-text: #f7f7f7;
+        --color-text-secondary: #aaa;
+    }
+}
+
+nav {
+    margin-bottom: 4rem;
+}
+
+section img,
+article img {
+    max-width: var(--width-card-wide);
+    width: 100%;
+    height: auto;
+}
+
+article nav {
+    margin-bottom: 0rem;
+}
