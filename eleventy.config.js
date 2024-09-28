@@ -8,6 +8,7 @@ const nav = require("@11ty/eleventy-navigation");
 const expandTabs = require('markdown-it-expand-tabs');
 const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const EleventyPluginTagCloud = require("eleventy-plugin-tag-cloud");
 
 module.exports = function(eleventyConfig) {
   // Customize Markdown library settings:
@@ -83,6 +84,7 @@ module.exports = function(eleventyConfig) {
     return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
   });
 
+  eleventyConfig.addPlugin(EleventyPluginTagCloud);
 
   return {
     markdownTemplateEngine: "njk",

@@ -2,6 +2,11 @@
 layout: base.njk
 ---
 	<h1>{{ title}}</h1>
+	{%- if created  %}
+	<p><small>
+		Posted on <time datetime="{{ created | htmlDateString }}">{{ created | htmlDateString }}</time>. Last updated on             <time datetime="{{ modified | htmlDateString }}">{{ modified | htmlDateString }}</time>.
+	</small></p>
+	{%- endif %}
 	<article>
 		{%- if tags.length  %}
 			<nav>
