@@ -5,19 +5,18 @@
   "main": "index.js",
   "scripts": {
     "build": "npx @11ty/eleventy",
-    "serve": "npx @11ty/eleventy --serve",
-    "postinstall": "patch-package"
+    "serve": "npx @11ty/eleventy --serve"
   },
   "author": "Jordan Thirus",
   "license": "CC-BY-NC-4.0",
-  "dependencies": {
+  "devDependencies": {
     "@11ty/eleventy": "^3.0.0-beta.1",
     "@11ty/eleventy-img": "^4.0.2",
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
-    "eleventy-plugin-backlinks": "^0.2.1",
+    "eleventy-plugin-backlinks": "github:jordan-thirus/eleventy-plugin-backlinks#fix/template-read",
     "luxon": "^3.5.0",
     "markdown-it": "^12.3.2",
     "markdown-it-attrs": "^4.2.0",
@@ -25,6 +24,6 @@
     "markdown-it-external-link": "^1.1.0",
     "markdown-it-footnote": "^3.0.3",
     "markdown-it-wikilinks": "^1.4.0",
-    "patch-package": "^8.0.0"
+    "eleventy-plugin-tag-cloud": "^0.7.0"
   }
 }
