@@ -3,12 +3,13 @@ const footnote = require('markdown-it-footnote');
 const wikilinks = require('markdown-it-wikilinks');
 const externallink = require('markdown-it-external-link').default;
 const backlinks = require("eleventy-plugin-backlinks");
-const rss = require("@11ty/eleventy-plugin-rss");
+const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
 const nav = require("@11ty/eleventy-navigation");
 const expandTabs = require('markdown-it-expand-tabs');
 const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const EleventyPluginTagCloud = require("eleventy-plugin-tag-cloud");
+const eleventyNavigation = require("@11ty/eleventy-navigation/eleventy-navigation");
 
 module.exports = function(eleventyConfig) {
   // Customize Markdown library settings:
@@ -30,13 +31,28 @@ module.exports = function(eleventyConfig) {
 
   //add plugins
   eleventyConfig.addPlugin(backlinks, { folder: '/notebook' });
-  eleventyConfig.addPlugin(rss, {
+  eleventyConfig.addPlugin(feedPlugin, {
 		type: "rss",
 		outputPath: "/feed.xml",
 		collection: {
-			name: "notebook", // iterate over `collections.posts`
+			name: "notes", // iterate over `collections.posts`
 			limit: 0,     // 0 means no limit
-		}
+		},
+    metadata: {
+      title: "One Notebook",
+      "subtitle": "Jordan Thirus' notes",
+      base: "https://jordan.thirus.me",
+      language: "en",
+      author: {
+        name: "Jordan Thirus",
+      }
+    },
+    templateData: {
+      eleventyNavigation: {
+        order: 99,
+        key: "Feed"
+      }
+    }
 	});
   eleventyConfig.addPlugin(nav);
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
