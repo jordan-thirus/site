@@ -16,7 +16,7 @@
     "@11ty/eleventy-plugin-rss": "^2.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
-    "eleventy-plugin-backlinks": "github:jordan-thirus/eleventy-plugin-backlinks#fix/template-read",
+    "eleventy-plugin-backlinks": "0.3.0",
     "eleventy-plugin-tag-cloud": "^0.7.0",
     "luxon": "^3.5.0",
     "markdown-it": "^12.3.2",
