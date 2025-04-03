@@ -1,8 +1,5 @@
 ---
 layout: home.njk
-eleventyNavigation:
-  key: Home
-  order: 0
 ---
 # Jordan Thirus' Notebook
 

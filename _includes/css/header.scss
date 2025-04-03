@@ -1,0 +1,31 @@
+@layer components{
+	header {
+		@apply flex justify-between items-center pb-16;
+
+		.site-title {
+			@apply text-gray-900 dark:text-white text-2xl no-underline uppercase;
+		}
+
+		nav{
+			@apply items-center;
+
+			ul {
+				list-style: none;
+				padding: 0;
+
+				li {
+					display: inline-block;
+					margin: 0 0.5rem;
+					position: relative;
+					text-align: left;
+					a {
+						@apply text-gray-900 dark:text-gray-300 font-normal text-lg no-underline float-right;
+					}
+				}
+			}
+
+		}
+	
+	}
+
+}
