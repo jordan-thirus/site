@@ -3,30 +3,46 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>{{ title or metadata.title }}</title>
-		<meta name="description" content="{{ description or metadata.description }}">
+		<title>
+			{% if title %}{{ title }} - {% endif %}{{ metadata.title }}
+		</title>
+				<meta name="description" content="{{ description or metadata.description }}">
 
 		<link rel="alternate" href="/feed.xml" type="application/rss+xml" title="{{ metadata.title }}">
 
 		<meta name="generator" content="{{ eleventy.generator }}">
 
-		<link href="/assets/fontawesome/css/all.min.css" rel="stylesheet"/>
-		<link href="/assets/mvp.css" rel="stylesheet"/>
-		<link href="/assets/mvp-override.css" rel="stylesheet"/>
-		<link href="/assets/prism-coldark-dark.css" rel="stylesheet"/>
-
-
+		<link href="/styles.min.css" rel="stylesheet"/>
 	</head>
 	<body>
-		<div>
 			<main>
 				<header>
+					<a href="/" class="site-title">{{ metadata.title}}</a>
 				<nav>
 					{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
 				</nav>
 				</header>
 				{{ content | safe }}
+				<footer>
+					<a href="/feed.xml">
+						<i class="fa-solid fa-rss"></i>
+						<span class="sr-only">RSS Feed</span>
+					</a> 
+					<a href="https://github.com/jordan-thirus/" target="_blank">
+						<i class="fa-brands fa-github"></i>
+						<span class="sr-only">Github</span>
+					</a> 
+					<a href="https://www.linkedin.com/in/jordan-thirus/" target="_blank">
+						<i class="fa-brands fa-linkedin"></i>
+						<span class="sr-only">LinkedIn</span>
+					</a>
+					<p>|</p>
+					  <a href="/colophon">
+						<span class="sr-only">Colophon (About this Site)</span>
+						Colophon
+					</a>
+				</footer>
 			</main>
-		</div>
 	</body>
+	{% getBundle "fontawesome" %}
 </html>
