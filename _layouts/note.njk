@@ -1,35 +1,40 @@
 ---
 layout: base.njk
 ---
-	<h1>{{ title}}</h1>
-	{%- if created  %}
-	<p><small>
-		Posted on <time datetime="{{ created | htmlDateString }}">{{ created | htmlDateString }}</time>. Last updated on             <time datetime="{{ modified | htmlDateString }}">{{ modified | htmlDateString }}</time>.
-	</small></p>
-	{%- endif %}
 	<article>
-		{%- if tags.length  %}
-			<nav>
+		<header>
+			<h1>{{ title}}</h1>
+			{%- if created  %}
+			<p>
+				<small>
+				Posted on <time datetime="{{ created | htmlDateString }}">{{ created | htmlDateString }}</time>. Last updated on             <time datetime="{{ modified | htmlDateString }}">{{ modified | htmlDateString }}</time>.
+				</small>
+			</p>
+			{%- endif %}
+			{%- if tags.length  %}
 				<ul>
 					{%- for tag in tags | filterTagList %}
-                    {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-	                <li><a href="{{ tagUrl }}" class="post-tag">#{{ tag }}</a></li>					
-                    {%- endfor %}
+					{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+					<li><a href="{{ tagUrl }}" class="post-tag">#{{ tag }}</a></li>					
+					{%- endfor %}
 				</ul>
-			</nav>
-		{%- endif %}
+			{%- endif %}
+		</header>
 		{{ content | safe }}
+	<footer>
+	
 
 	{%- if backlinks.length  %}
-    <small>
-        <h4>Pages that link to this page:</h4>
-        <ul>
-		{%- for backlink in backlinks %}
-            <li><a href="{{ backlink.url }}">{{ backlink.title }}</a></li>
-        {%- endfor %}
-        </ul>
-    </small>
-{%- endif %}
+		<small>
+			<h2>Pages that link to this page:</h2>
+			<ul>
+			{%- for backlink in backlinks %}
+				<li><a href="{{ backlink.url }}">{{ backlink.title }}</a></li>
+			{%- endfor %}
+			</ul>
+		</small>
+	{%- endif %}
+	</footer>
 	</article>
 
 

@@ -1,3 +1,5 @@
-module.exports = {
-	"layout": "note.njk",
-};
+export default function() {
+	return {
+		layout: "note.njk"
+	}
+}

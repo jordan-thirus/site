@@ -1,5 +1,5 @@
 module.exports = {
-	title: "One Notebook",
+	title: "Jordan Thirus",
 	url: "https://jordan.thirus.me",
 	language: "en",
 	author: {

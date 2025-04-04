@@ -15,7 +15,7 @@ Amazon Web Services (AWS) is a cloud services provider owned by Amazon. It provi
 ## Services
 - [[2409221841-AWS-Identity-And-Access-Management|2409221841]] - Identity and Access Management (IAM)
 - Amplify
-	- [[2409172213-Deploy-11ty-on-AWS-Amplify-Gen-2|Deploy 11ty on AWS Amplify Gen 2]]
+    - [[2409172213-Deploy-11ty-on-AWS-Amplify-Gen-2|Deploy 11ty on AWS Amplify Gen 2]]
 
 See also: 
 - [What is AWS](https://aws.amazon.com/what-is-aws/)

@@ -6,16 +6,15 @@ aliases:
   - IAM
   - "2409221841"
 created: 2024-09-22
-modified: 2024-09-22
+modified: 2024-10-28
 tags:
   - aws
   - aws-iam
 ---
-Identity and Access Management (IAM) is an AWS global service. Identities are separated into [[2409221859-AWS-IAM-Users|IAM users]] and roles (which are assigned to resources). Permissions are managed by policies that can be attached
+Identity and Access Management (IAM) is an AWS global service. Identities are separated into [[2409221859-AWS-IAM-Users|IAM users]] and roles (which are assigned to resources). Permissions are managed by  [[2410282012-AWS-IAM-Policies|policies]].
 
 ## Best Practices
 - Apply least privilege principle - users and roles should have the minimum amount of permissions required to fulfill their needs. Access Analyzer can help identify those minimum permissions. [^1]
-
 
 See also:
 - [IAM Documentation](https://docs.aws.amazon.com/iam/)
