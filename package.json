@@ -1,13 +1,13 @@
 {
   "name": "site",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Jordan Thirus's personal website",
   "type": "module",
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf ./public",
     "build": "ELEVENTY_ENV=production npx @11ty/eleventy",
-    "serve": "ELEVENTY_ENV=development npx @11ty/eleventy --serve"
+    "dev": "ELEVENTY_ENV=development npx @11ty/eleventy --serve"
   },
   "author": "Jordan Thirus",
   "license": "CC-BY-NC-4.0",

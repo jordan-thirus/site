@@ -1,5 +1,6 @@
 ---
 title: Index
+permalink: /notebook/index.html
 date:
 eleventyNavigation:
   key: Notebook

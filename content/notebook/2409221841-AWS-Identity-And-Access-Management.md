@@ -16,7 +16,6 @@ Identity and Access Management (IAM) is an AWS global service. Identities are se
 ## Best Practices
 - Apply least privilege principle - users and roles should have the minimum amount of permissions required to fulfill their needs. Access Analyzer can help identify those minimum permissions. [^1]
 
-
 See also:
 - [IAM Documentation](https://docs.aws.amazon.com/iam/)
 

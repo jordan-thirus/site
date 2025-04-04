@@ -38,7 +38,6 @@ A password policy defined the requirements for a user's login password. By defau
 - Enable MFA for login to the AWS console
 - Do not share access keys
 - Avoid using the root account
-- A
 
 
 [^1]: _Reviewing Last Accessed Information for Your AWS Account - AWS Identity and Access Management_. https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started-reduce-permissions.html. Accessed 22 Sept. 2024.
