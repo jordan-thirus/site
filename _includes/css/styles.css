@@ -21,7 +21,7 @@
   
   @layer components {
 	  body {
-		  @apply flex lg:pt-16 gap-1 max-w-4xl mx-auto bg-slate-100 dark:bg-slate-950;
+		  @apply flex p-4 lg:p-0 lg:pt-16 gap-1 max-w-4xl mx-auto bg-slate-100 dark:bg-slate-950;
 	  }
   
 	  main {
