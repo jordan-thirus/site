@@ -1,23 +1,22 @@
 @layer components{
 	header {
-		@apply flex justify-between items-center pb-16;
+		@apply grid md:flex justify-between items-center pb-16 mx-auto md:mx-0;
 
 		.site-title {
-			@apply text-gray-900 dark:text-white text-2xl no-underline uppercase;
+			@apply text-gray-900 dark:text-white text-3xl md:text-2xl no-underline uppercase pb-4;
 		}
 
 		nav{
-			@apply items-center;
+			@apply items-center mx-auto md:mx-0;
 
 			ul {
-				list-style: none;
-				padding: 0;
+
+				@apply list-none p-0;
 
 				li {
-					display: inline-block;
-					margin: 0 0.5rem;
-					position: relative;
-					text-align: left;
+
+					@apply inline-block relative text-left mx-2;
+
 					a {
 						@apply text-gray-900 dark:text-gray-300 font-normal text-lg no-underline float-right;
 					}
