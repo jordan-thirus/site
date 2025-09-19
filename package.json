@@ -4,6 +4,10 @@
   "description": "Jordan Thirus's personal website",
   "type": "module",
   "main": "index.js",
+  "engines": {
+		"node": ">=22",
+		"pnpm": ">=10"
+	},
   "scripts": {
     "clean": "rm -rf ./public",
     "build": "ELEVENTY_ENV=production npx @11ty/eleventy",
