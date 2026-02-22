@@ -28,6 +28,6 @@
     "markdown-it-external-link": "^1.1.0",
     "markdown-it-footnote": "^4.0.0",
     "markdown-it-wikilinks": "^1.4.0",
-    "tailwindcss": "^4.0.17"
+    "tailwindcss": "^4.2.0"
   }
 }
