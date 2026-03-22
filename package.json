@@ -12,7 +12,7 @@
   "author": "Jordan Thirus",
   "license": "CC-BY-NC-4.0",
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.0",
+    "@11ty/eleventy": "^3.1.5",
     "@11ty/eleventy-img": "^6.0.4",
     "@11ty/eleventy-navigation": "^1.0.5",
     "@11ty/eleventy-plugin-rss": "^2.0.2",
