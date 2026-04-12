@@ -18,7 +18,7 @@
     "@11ty/eleventy-plugin-rss": "^2.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@11ty/font-awesome": "^1.0.0-beta.10",
-    "eleventy-plugin-backlinks": "0.3.0",
+    "eleventy-plugin-backlinks": "1.0.0",
     "eleventy-plugin-footnotes": "^0.11.0",
     "eleventy-plugin-tag-cloud": "^0.7.0",
     "eleventy-shared-plugins": "github:jordan-thirus/11ty-shared-plugins#v1.0.0",
