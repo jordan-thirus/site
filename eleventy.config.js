@@ -5,7 +5,7 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight"
 import EleventyPluginTagCloud from "eleventy-plugin-tag-cloud"
 import fontAwesomePlugin from "@11ty/font-awesome"
-import { tags, minMaxHtml, dateFilters, processSass } from 'eleventy-shared-plugins';
+import { tags, minMaxHtml, dateFilters, processSass } from '@jordan-thirus/11ty-shared-plugins';
 import configureMarkdown from "./_11ty/markdown-it.js";
 
 export default async function(eleventyConfig) {
