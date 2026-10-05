@@ -4,27 +4,29 @@ layout: base.njk
 	<article>
 		<header>
 			<h1>{{ title}}</h1>
-			{%- if created  %}
-			<p>
-				<small>
-				Posted on <time datetime="{{ created | htmlDateString }}">{{ created | htmlDateString }}</time>. Last updated on             <time datetime="{{ modified | htmlDateString }}">{{ modified | htmlDateString }}</time>.
-				</small>
-			</p>
-			{%- endif %}
-			{%- if tags.length  %}
+			<small>
+			<nav>
 				<ul>
-					{%- for tag in tags | filterTagList %}
-					{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-					<li><a href="{{ tagUrl }}" class="post-tag">#{{ tag }}</a></li>					
-					{%- endfor %}
+					{%- if created  %}
+					<li>
+						Posted on <time datetime="{{ created | htmlDateString }}">{{ created | htmlDateString }}</time>. Last updated on             <time datetime="{{ modified | htmlDateString }}">{{ modified | htmlDateString }}</time>.
+					</li>
+					{%- endif %}
+					{%- if tags.length  %}
+							{%- for tag in tags | filterTagList %}
+							{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+							<li><a href="{{ tagUrl }}" class="post-tag">#{{ tag }}</a></li>					
+							{%- endfor %}
+					{%- endif %}
+
 				</ul>
-			{%- endif %}
+			</nav>
+			</small>
 		</header>
 		{{ content | safe }}
-	<footer>
-	
-
 	{%- if backlinks.length  %}
+
+	<footer>
 		<small>
 			<h2>Pages that link to this page:</h2>
 			<ul>
@@ -33,8 +35,9 @@ layout: base.njk
 			{%- endfor %}
 			</ul>
 		</small>
-	{%- endif %}
 	</footer>
+						{%- endif %}
+
 	</article>
 
 

@@ -14,33 +14,48 @@
 
 		<link href="/styles.min.css" rel="stylesheet"/>
 	</head>
-	<body>
+	<body class="container">
 			<main>
 				<header>
-					<a href="/" class="site-title">{{ metadata.title}}</a>
-				<nav>
+					<nav>
+						<ul>
+					<li>
+						<a href="/" class="site-title">{{ metadata.title}}</a>
+						</li>
+						</ul>
 					{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
 				</nav>
 				</header>
 				{{ content | safe }}
 				<footer>
+					<nav>
+						<ul>
+							<li>
 					<a href="/feed.xml">
 						<i class="fa-solid fa-rss"></i>
 						<span class="sr-only">RSS Feed</span>
 					</a> 
+				</li>
+				<li>
 					<a href="https://github.com/jordan-thirus/" target="_blank">
 						<i class="fa-brands fa-github"></i>
 						<span class="sr-only">Github</span>
 					</a> 
+				</li>
+				<li>
 					<a href="https://www.linkedin.com/in/jordan-thirus/" target="_blank">
 						<i class="fa-brands fa-linkedin"></i>
 						<span class="sr-only">LinkedIn</span>
 					</a>
-					<p>|</p>
+				</li>
+				<li>
 					  <a href="/colophon">
 						<span class="sr-only">Colophon (About this Site)</span>
 						Colophon
 					</a>
+				</li>
+						</ul>
+					</nav>
 				</footer>
 			</main>
 	</body>

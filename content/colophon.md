@@ -4,7 +4,7 @@ layout: base.njk
 ---
 # Colophon
 
-This site was built with the [11ty](https://www.11ty.dev/) static site generator, and TailwindCSS for styling and published on AWS using Amplify. I consider it to be in a MVP state and I'll continue updating as I progress on my journey.
+This site was built with the [11ty](https://www.11ty.dev/) static site generator, PicoCSS for styling, and published on AWS using Amplify. I consider it to be in a MVP state and I'll continue updating as I progress on my journey.
 
 ## Digital Garden
 
