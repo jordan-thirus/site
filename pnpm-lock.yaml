@@ -51,8 +51,8 @@ importers:
         specifier: ^15.0.2
         version: 15.0.2
       markdown-it-attrs:
-        specifier: ^4.5.0
-        version: 4.5.0(markdown-it@15.0.2)
+        specifier: ^5.0.1
+        version: 5.0.1(markdown-it@15.0.2)
       markdown-it-expand-tabs:
         specifier: ^1.0.13
         version: 1.0.13
@@ -314,7 +314,7 @@ packages:
     os: [win32]
 
   '@jordan-thirus/11ty-shared-plugins@https://codeload.github.com/jordan-thirus/11ty-shared-plugins/tar.gz/85631560f764e3dd7135cf4d1fae38d2ddde6f41':
-    resolution: {tarball: https://codeload.github.com/jordan-thirus/11ty-shared-plugins/tar.gz/85631560f764e3dd7135cf4d1fae38d2ddde6f41}
+    resolution: {gitHosted: true, integrity: sha512-zpSb0EgX3labwDTnOVLdchNJ5Es17uSHhR/18prsQ9CU+JINg+XKx2ozbo6HlrIVisrh5gcBk5x2tdQojr/TLg==, tarball: https://codeload.github.com/jordan-thirus/11ty-shared-plugins/tar.gz/85631560f764e3dd7135cf4d1fae38d2ddde6f41}
     version: 2.0.4
     peerDependencies:
       '@11ty/eleventy': 3.x
@@ -895,8 +895,8 @@ packages:
     resolution: {integrity: sha512-vtEhXh/gNjI9Yg1u4jX/0YVPMvxzHuGgCm6tC5kZyb08yjGWGnqAjGJvcXbqQR2P3MyMEFnRbpcdFS6PBcLqew==}
     engines: {node: '>=12'}
 
-  markdown-it-attrs@4.5.0:
-    resolution: {integrity: sha512-dsuEyK/MDAYsdZLDIaDAQXz5+gP0AAbJ4ZjOSB0w+ZGe4lLbzyCgGg0LApC6j9zUK2F+2SA9VkzXfyNG9hL/8g==}
+  markdown-it-attrs@5.0.1:
+    resolution: {integrity: sha512-dTP49/FLERwbgqmfIG5LwnC99qecIJYalKQbl3pY+7Hajk+Z+cazeEZaKwofpM9KFxvfRVF0UN9GYxKKAakfNg==}
     engines: {node: '>=6'}
     peerDependencies:
       markdown-it: '>= 9.0.0'
@@ -1266,7 +1266,7 @@ packages:
     engines: {node: '>= 20.19.0'}
 
   reurl@https://codeload.github.com/jsepia/reurl/tar.gz/a3210117636c115fb139517fcfb2ea929025cded:
-    resolution: {tarball: https://codeload.github.com/jsepia/reurl/tar.gz/a3210117636c115fb139517fcfb2ea929025cded}
+    resolution: {gitHosted: true, tarball: https://codeload.github.com/jsepia/reurl/tar.gz/a3210117636c115fb139517fcfb2ea929025cded}
     version: 1.0.0-rc.2
 
   sanitize-filename@1.6.4:
@@ -2206,7 +2206,7 @@ snapshots:
 
   luxon@3.7.2: {}
 
-  markdown-it-attrs@4.5.0(markdown-it@15.0.2):
+  markdown-it-attrs@5.0.1(markdown-it@15.0.2):
     dependencies:
       markdown-it: 15.0.2
 
