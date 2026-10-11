@@ -18,8 +18,8 @@ importers:
         specifier: ^3.1.6
         version: 3.1.6
       '@11ty/eleventy-img':
-        specifier: ^6.0.4
-        version: 6.0.4
+        specifier: ^7.0.0
+        version: 7.0.0
       '@11ty/eleventy-navigation':
         specifier: ^1.0.5
         version: 1.0.5
@@ -83,9 +83,9 @@ packages:
     resolution: {integrity: sha512-4HS6QB/mVWTVlE6kjCKPkjkC1Z0YOqizJaHR05zK+E7a2b4EUC3T+wLktIy7wEl76ZoarkY45EKLmTw1XuR8fQ==}
     engines: {node: '>=18'}
 
-  '@11ty/eleventy-img@6.0.4':
-    resolution: {integrity: sha512-jSy9BmubVs0mN76dcXWfSYDgRU+1+/rq/SxUR3MgIvTUAJRDop5pFW+Z1f56CDcOlEHaiPqHgnfOlqRmJvXl7g==}
-    engines: {node: '>=18'}
+  '@11ty/eleventy-img@7.0.0':
+    resolution: {integrity: sha512-4b8BSTd1XZSax3hFg1Iyv3B3Vc2DmuTenbFr7M0+x4H3fNJDYq3Bctc9rDxiD021hzO7v6MPXXCb5HsQT6//Aw==}
+    engines: {node: '>=22'}
 
   '@11ty/eleventy-navigation@1.0.5':
     resolution: {integrity: sha512-zb6xe29cM9viSdYtZywKIkJw2HIROyBINdBcFWC9uD0c/jYOTAex5nwy3HNEuh5t6/Ld/S9V4gEizfmeYuYpCQ==}
@@ -314,7 +314,7 @@ packages:
     os: [win32]
 
   '@jordan-thirus/11ty-shared-plugins@https://codeload.github.com/jordan-thirus/11ty-shared-plugins/tar.gz/85631560f764e3dd7135cf4d1fae38d2ddde6f41':
-    resolution: {tarball: https://codeload.github.com/jordan-thirus/11ty-shared-plugins/tar.gz/85631560f764e3dd7135cf4d1fae38d2ddde6f41}
+    resolution: {gitHosted: true, integrity: sha512-zpSb0EgX3labwDTnOVLdchNJ5Es17uSHhR/18prsQ9CU+JINg+XKx2ozbo6HlrIVisrh5gcBk5x2tdQojr/TLg==, tarball: https://codeload.github.com/jordan-thirus/11ty-shared-plugins/tar.gz/85631560f764e3dd7135cf4d1fae38d2ddde6f41}
     version: 2.0.4
     peerDependencies:
       '@11ty/eleventy': 3.x
@@ -710,6 +710,9 @@ packages:
   eventemitter3@4.0.7:
     resolution: {integrity: sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==}
 
+  eventemitter3@5.0.4:
+    resolution: {integrity: sha512-mlsTRyGaPBjPedk6Bvw+aqbsXDtoAyAzm5MO7JgU+yVRyMQ5O8bD4Kcci7BS85f93veegeCPkL8R4GLClnjLFw==}
+
   extend-shallow@2.0.1:
     resolution: {integrity: sha512-zCnTtlxNoAiDc3gqY2aYAWFx7XWWiasuF2K8Me5WbN8otHKTUKBwjPtNpRs/rbUZm7KxWAaNj7P1a/p52GbVug==}
     engines: {node: '>=0.10.0'}
@@ -798,11 +801,6 @@ packages:
   http-errors@2.0.1:
     resolution: {integrity: sha512-4FbRdAX+bSdmo4AUFuS0WNiPz8NgFt+r8ThgNWmlrjQjt1Q7ZR9+zTlce2859x4KSXrwIsaeTqDoKQmtP8pLmQ==}
     engines: {node: '>= 0.8'}
-
-  image-size@2.0.4:
-    resolution: {integrity: sha512-QRUkFFsRV/6fuESxb9Vkq+a0LkSrgKXuc2NEqfikiXxxN/G3tjWt5EVUlMaImRBZRZK/jRBEbYvpPYZL8t08Zw==}
-    engines: {node: '>=18'}
-    hasBin: true
 
   immutable@5.1.9:
     resolution: {integrity: sha512-m8nVez3rwrgmWxtLMt1ZYXB2Lv7OKYn/disyxAlSDYAlKSlFoPPfIAmAM/M5xqL4m4C/wAPw7S2/CNaUii1Hxg==}
@@ -1005,6 +1003,10 @@ packages:
       chokidar:
         optional: true
 
+  obug@2.2.1:
+    resolution: {integrity: sha512-XrsrhT5sybtKI6wakr2SPOlGZWWYbUXZ7a0jT8/QOeAPau+1X/bSegNe5YR75oJmEZQbKningirmGOEJCIk61Q==}
+    engines: {node: '>=12.20.0'}
+
   on-finished@2.4.1:
     resolution: {integrity: sha512-oVlzkg3ENAhCk2zdv7IJwd/QUD4z2RxRwpkcGY8psCVcCYZNq4wYnVWALHM+brtuJjePWiYF/ClmuDr8Ch5+kg==}
     engines: {node: '>= 0.8'}
@@ -1017,9 +1019,17 @@ packages:
     resolution: {integrity: sha512-RwFpb72c/BhQLEXIZ5K2e+AhgNVmIejGlTgiB9MzZ0e93GRvqZ7uSi0dvRF7/XIXDeNkra2fNHBxTyPDGySpjQ==}
     engines: {node: '>=8'}
 
+  p-queue@9.3.3:
+    resolution: {integrity: sha512-NXAOdnEe5FsZJfT4oK84lE1Y5cFFdWlRuOo5tww8DyNMxyRXwn39fIkUtNLKppcPC+UYU/bXujNCUGDv01y7CA==}
+    engines: {node: '>=20'}
+
   p-timeout@3.2.0:
     resolution: {integrity: sha512-rhIwUycgwwKcP9yTOOFK/AKsAopjjCakVqLHePO3CC6Mir1Z99xT+R63jZxAT5lFZLa2inS5h+ZS2GvR99/FBg==}
     engines: {node: '>=8'}
+
+  p-timeout@7.0.2:
+    resolution: {integrity: sha512-prbX4Z3YszrFNgH+MW5Zoeq3baXrMtP/MQnFeET90UB/GtGcGDQ5Usg9OCy6ETjTTntOw1SL2z9fMPUppN3Guw==}
+    engines: {node: '>=20'}
 
   parse-srcset@1.0.2:
     resolution: {integrity: sha512-/2qh0lav6CmI15FzA3i/2Bzk2zCgQhGMkvhOhKNcBVQ1ldgpbfiNTVslmooUmWJcADi1f1kIeynbDRVzNlfR6Q==}
@@ -1266,7 +1276,7 @@ packages:
     engines: {node: '>= 20.19.0'}
 
   reurl@https://codeload.github.com/jsepia/reurl/tar.gz/a3210117636c115fb139517fcfb2ea929025cded:
-    resolution: {tarball: https://codeload.github.com/jsepia/reurl/tar.gz/a3210117636c115fb139517fcfb2ea929025cded}
+    resolution: {gitHosted: true, tarball: https://codeload.github.com/jsepia/reurl/tar.gz/a3210117636c115fb139517fcfb2ea929025cded}
     version: 1.0.0-rc.2
 
   sanitize-filename@1.6.4:
@@ -1447,15 +1457,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@11ty/eleventy-img@6.0.4':
+  '@11ty/eleventy-img@7.0.0':
     dependencies:
       '@11ty/eleventy-fetch': 5.1.3
       '@11ty/eleventy-utils': 2.0.7
       brotli-size: 4.0.0
-      debug: 4.4.3
-      entities: 6.0.1
-      image-size: 2.0.4
-      p-queue: 6.6.2
+      entities: 8.1.0
+      obug: 2.2.1
+      p-queue: 9.3.3
       sharp: 0.35.5
     transitivePeerDependencies:
       - '@types/node'
@@ -2058,6 +2067,8 @@ snapshots:
 
   eventemitter3@4.0.7: {}
 
+  eventemitter3@5.0.4: {}
+
   extend-shallow@2.0.1:
     dependencies:
       is-extendable: 0.1.1
@@ -2133,8 +2144,6 @@ snapshots:
       setprototypeof: 1.2.0
       statuses: 2.0.2
       toidentifier: 1.0.1
-
-  image-size@2.0.4: {}
 
   immutable@5.1.9: {}
 
@@ -2306,6 +2315,8 @@ snapshots:
     optionalDependencies:
       chokidar: 3.6.0
 
+  obug@2.2.1: {}
+
   on-finished@2.4.1:
     dependencies:
       ee-first: 1.1.1
@@ -2317,9 +2328,16 @@ snapshots:
       eventemitter3: 4.0.7
       p-timeout: 3.2.0
 
+  p-queue@9.3.3:
+    dependencies:
+      eventemitter3: 5.0.4
+      p-timeout: 7.0.2
+
   p-timeout@3.2.0:
     dependencies:
       p-finally: 1.0.0
+
+  p-timeout@7.0.2: {}
 
   parse-srcset@1.0.2: {}
 
