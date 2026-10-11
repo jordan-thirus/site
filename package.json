@@ -24,7 +24,7 @@
     "@11ty/font-awesome": "^2.0.0",
     "@jordan-thirus/11ty-shared-plugins": "github:jordan-thirus/11ty-shared-plugins",
     "@picocss/pico": "^2.1.1",
-    "eleventy-plugin-backlinks": "0.3.0",
+    "eleventy-plugin-backlinks": "1.0.0",
     "eleventy-plugin-footnotes": "^0.11.0",
     "eleventy-plugin-tag-cloud": "^0.7.0",
     "markdown-it": "^15.0.2",
