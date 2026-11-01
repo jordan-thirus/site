@@ -39,8 +39,8 @@ importers:
         specifier: ^2.1.1
         version: 2.1.1
       eleventy-plugin-backlinks:
-        specifier: 0.3.0
-        version: 0.3.0(@11ty/eleventy@3.1.6)
+        specifier: 1.0.0
+        version: 1.0.0(@11ty/eleventy@3.1.6)
       eleventy-plugin-footnotes:
         specifier: ^0.11.0
         version: 0.11.0
@@ -634,10 +634,10 @@ packages:
   electron-to-chromium@1.5.444:
     resolution: {integrity: sha512-5ss/uJfoDYDHT0lfJzT6FbcskIzROIOPf0BbbFkGcvDzoJU7i//9GDrwwIHQVmIsrAGiF3ihpADBRIsrEFt1rQ==}
 
-  eleventy-plugin-backlinks@0.3.0:
-    resolution: {integrity: sha512-3L9AuBVj6USzyGcV4FDvKLJbQR2UUeWx7LJHJAwljl3JXCXH9VqTd76Tb91dO9xblOX0kS0wpt5bDYfbHo/sHA==}
+  eleventy-plugin-backlinks@1.0.0:
+    resolution: {integrity: sha512-L9I+vgi9V1INa/RMJQ1Rmg8akp0ejhkVp2XgxBcDNoOupVpAR4wFEmwryZ9Cy4NVumR19FlT4nmbedxDnwatwg==}
     peerDependencies:
-      '@11ty/eleventy': '>=2.0.0'
+      '@11ty/eleventy': ^3.0.0
 
   eleventy-plugin-footnotes@0.11.0:
     resolution: {integrity: sha512-NQd6jNPekxIhESIIWPKUv2XXoYYknfDG8KjCdftSMGquncu1u9StVIDPmBinPChl4l68d8qTgmMXyM7kRxwGsg==}
@@ -2005,10 +2005,9 @@ snapshots:
 
   electron-to-chromium@1.5.444: {}
 
-  eleventy-plugin-backlinks@0.3.0(@11ty/eleventy@3.1.6):
+  eleventy-plugin-backlinks@1.0.0(@11ty/eleventy@3.1.6):
     dependencies:
       '@11ty/eleventy': 3.1.6
-      markdown-it-wikilinks: 1.4.0
 
   eleventy-plugin-footnotes@0.11.0:
     dependencies:
